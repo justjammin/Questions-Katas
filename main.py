@@ -1,31 +1,24 @@
-#Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+#QUESTION 5
+#Given array1 and array2 populated with numbers, return an array of their intersection. Each value must show the amount of times it shows in both arrays combined. Order does not matter.
 
-#You may assume that each input would have exactly one solution, and you may not use the same element twice.
-#You can return the answer in any order.
+#EX. 1
+#Input: array1 = [1,2,2,1], array2 = [2,2]
+#Output: [2,2]
 
-#Ex 1: 
-#Input: nums = [2,7,11,15], target = 9
-#Output: [0,1]
-#Output: Because nums[0] + nums[1] == 9, we return [0, 1].
+#EX. 2
+#Input: array1 = [4,9,5], array2 = [9,4,9,8,4]
+#Output: [4,9]
 
-#Ex 2:
-#Input: nums = [3,3], target = 6
-#Output: [0,1]
 import time
 
 start = time.process_time_ns()
-target = 9
-nums = [3,2,15,7]
-indices = []
-for num in nums:
-  noname = target - num
-  if noname in nums:
-    indices.append(nums.index(num))
-    indices.append(nums.index(noname))
-    break
-else:
-  indices = []
-print(indices)
+prices = [12,1,2,15,7,4,30]
+buy = min(prices)
+buy_day = prices.index(min(prices)) + 1
+sell = max(prices)
+sell_day = prices.index(max(prices)) + 1
+
+print("I bought on day " + str(buy_day) + " sold on day " + str(sell_day) + " and made " + str((sell - buy)) + " dollars" )
 
 
 
