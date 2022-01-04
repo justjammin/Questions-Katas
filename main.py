@@ -1,4 +1,4 @@
-input = "racecar"
+input = "1221"
 
 input = str(input)
 
@@ -7,7 +7,5 @@ def missyElliot(input):
 
 reversed = missyElliot(input)
 
-if input != reversed:
-  print(False)
-else: 
-  print(True)
+print(bool(input == reversed))
+
