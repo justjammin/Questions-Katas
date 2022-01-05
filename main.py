@@ -1,11 +1,19 @@
-input = "1221"
+vowels = ["a","e","i","o","u",]
 
-input = str(input)
+Input = "whatever"
 
-def missyElliot(input):
-  return input[::-1]
+for letter in Input:
+  if letter in vowels:
+    Input=Input.replace(letter,"");
+print(Input)
 
-reversed = missyElliot(input)
+string = "leetcodeisacommunityforcoders"
 
-print(bool(input == reversed))
-
+newstr = string;
+print("\nRemoving vowels from the given string");
+vowels = ('a', 'e', 'i', 'o', 'u');
+for x in string.lower():
+    if x in vowels:
+        newstr = newstr.replace(x,"");
+print("New string after successfully removed all the vowels:");
+print(newstr);
